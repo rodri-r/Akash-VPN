@@ -13,7 +13,6 @@ check out this image I drew to help you out
 
 **What to make:**
 - Landing page that kinda looks like the image
-- Connect/disconnect buttons (the fun part)
 - That's it.
 
 The designer will make it pretty later, so just get the basic structure down.
