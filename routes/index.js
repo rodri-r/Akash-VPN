@@ -6,8 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET hello world endpoint */
-router.get('/hello', function(req, res) {
+/* GET status endpoint */
+router.get('/status', function(req, res) {
   res.send('hello world');
 });
 

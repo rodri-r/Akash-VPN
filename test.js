@@ -1,10 +1,10 @@
 const http = require('http');
 
-// Test the /hello endpoint
+// Test the /status endpoint
 const options = {
   hostname: 'localhost',
   port: 3000,
-  path: '/hello',
+  path: '/status',
   method: 'GET'
 };
 
@@ -28,5 +28,5 @@ req.on('error', (err) => {
 
 req.end();
 
-console.log('Testing /hello endpoint...');
+console.log('Testing /status endpoint...');
   
