@@ -28,8 +28,10 @@ Here’s why people use VPNs every day:
 We currently have active servers in:
 
 * **United States** 🇺🇸 (New York, Texas, Wyoming, Florida, South Carolina)
-* **Belgium** 🇧🇪
-* **Switzerland** 🇨🇭
+* **Spain** 🇪🇸 (Galicia)
+* **Germany** 🇩🇪 (Bavaria)
+* **Romania** 🇷🇴 (Dolj)
+* **Switzerland** 🇨🇭 (Bern)
 
 These are real, audited providers on the Akash Network — and we’re expanding all the time!
 
