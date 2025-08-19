@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/**
+ * Akash Network-inspired custom theme.
+ * Replace or extend the default Docusaurus Infima variables.
+ */
+
+
+ :root {
+  /* Akash Red (Primary) */
+  --ifm-color-primary: #ef4444; /* Bright red */
+  --ifm-color-primary-dark: #dc2626; /* Deep red */
+  --ifm-color-primary-darker: #b91c1c;
+  --ifm-color-primary-darkest: #991b1b;
+  --ifm-color-primary-light: #f87171;
+  --ifm-color-primary-lighter: #fca5a5;
+  --ifm-color-primary-lightest: #fee2e2;
+
+  /* Code block highlighting */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 58, 58, 0.05);
+
+  /* Typography (optional) */
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff5c5c;
+  --ifm-color-primary-dark: #ff3a3a;
+  --ifm-color-primary-darker: #e00000;
+  --ifm-color-primary-darkest: #b30000;
+  --ifm-color-primary-light: #ff7a7a;
+  --ifm-color-primary-lighter: #ff9e9e;
+  --ifm-color-primary-lightest: #ffcfcf;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 58, 58, 0.1);
+}
