@@ -1,3 +1,0 @@
-[33m9e8e748[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fix: resolve ECONNRESET error in disconnect endpoint
-[33mb16b846[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m refactor: move routes and test files into server folder
-[33m0aa9d46[m refactor: rename /hello endpoint to /status
