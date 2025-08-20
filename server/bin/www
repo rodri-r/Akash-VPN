@@ -21,6 +21,9 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+// Set server timeout to handle long-running requests
+server.timeout = 30000; // 30 seconds
+
 /**
  * Listen on provided port, on all network interfaces.
  */

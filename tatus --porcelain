@@ -1,0 +1,4 @@
+[33mb16b846[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m refactor: move routes and test files into server folder
+[33m0aa9d46[m refactor: rename /hello endpoint to /status
+[33mfff9c8e[m feat: add /hello endpoint and test script
+[33m9d30ecb[m Initial commit
