@@ -1,28 +1,22 @@
-# Make a Frontend [Beginner]
-please make a frontend for our VPN SaaS
+# Make a Frontend [Intermediate]
+please dockerize the Next.js frontend for Akash deployment
+
 ## What Specifically Needs to Be Done (Deliverables)
 ### [1st Deliverable]
-Whip up a quick frontend using no-code tools. 
-### [Additional Info]
-check out this image I drew to help you out
-![alt text](../reference/AkashVPN.png). Do something that looks like this. The designer can add images and styling later
+Create a Dockerfile for the Next.js frontend and ensure it builds and serves properly in a container.
 
-**Tools to use:**
-- Lovable.dev (drag & drop, super easy)
-- Keep it simple, we're not building the next Netflix
+**What to include:**
+- Create Dockerfile for Next.js frontend
+- Ensure all dependencies are properly included
+- Test that frontend works in containerized environment
+- Verify all components and pages render correctly
+- Create SDL file for Akash deployment (service definition, resources, ports)
 
-**What to make:**
-- Landing page that kinda looks like the image
-- That's it.
+**What to verify:**
+- Frontend serves correctly on containerized ports
+- All pages and components work as expected
+- Proper static asset handling
 
-The designer will make it pretty later, so just get the basic structure down.
-
-### [2nd Deliverable]
-Commit your frontend to the github repo
-### [Additional Info]
-that is all
 ### [1st Deliverable]: 1 hours
-Summary: throw together a VPN frontend with no-code tools.
-### [2nd Deliverable]: 0 hours
-Summary: commit frontend to repo.
+Summary: dockerize Next.js frontend for Akash deployment.
 Total Estimated Time: 1 hours

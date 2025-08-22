@@ -1,33 +1,23 @@
-# Make a Docs Deployment [Beginner]
-please deploy an open source documentation solution
+# Make a Docs Deployment [Intermediate]
+please dockerize the Docusaurus documentation site for Akash deployment
+
 ## What Specifically Needs to Be Done (Deliverables)
 ### [1st Deliverable]
-Deploy a simple docs site using any open source tool. Pick something easy, we're not building Wikipedia.
+Create a Dockerfile for the Docusaurus documentation site and ensure it builds and serves properly in a container.
 ### [Additional Info]
-none
-**Tools to consider:**
-- Docusaurus (React-based, super popular)
-- GitBook (markdown-based, very simple)
-- VuePress (Vue-based, clean and fast)
+The Docusaurus documentation site already exists with a clean, professional theme but needs to be containerized for deployment on Akash Network.
 
-**What to deploy:**
-- Basic docs structure (the FAQ person will write the content)
-- Hostable on akash
-- Make it look decent (use a theme, don't go crazy)
-- Link it to our repo so we can update it
+**What to include:**
+- Create Dockerfile for Docusaurus site
+- Ensure all dependencies are properly included
+- Test that documentation site works in containerized environment
+- Verify all pages and navigation work correctly
+- Create SDL file for Akash deployment (service definition, resources, ports)
 
-**Keep it simple:**
-- Don't over-engineer, just get something working
-- Use default themes, don't spend hours customizing
-- You don't need to write content, just set up the structure
-- We can always make it prettier later
+**What to verify:**
+- Documentation site serves correctly on containerized ports
+- All pages and navigation work as expected
 
-### [2nd Deliverable]
-Commit your docs deployment to the github repo
-### [Additional Info]
-that is all
 ### [1st Deliverable]: 1 hours
-Summary: deploy a simple docs site with open source tools.
-### [2nd Deliverable]: 0 hours
-Summary: commit docs deployment to repo.
+Summary: dockerize Docusaurus documentation site for Akash deployment.
 Total Estimated Time: 1 hours

@@ -1,32 +1,31 @@
-# Make an SDL File [Beginner]
-please make an SDL file for our VPN SaaS
+# Make an SDL File [Intermediate]
+please create a master SDL file for deploying all services on Akash Network
+
 ## What Specifically Needs to Be Done (Deliverables)
 ### [1st Deliverable]
-Create a simple SDL file that defines our VPN service. Keep it basic, we're not writing a novel.
+Create a comprehensive SDL file that includes all services for the complete community VPN deployment.
 ### [Additional Info]
-check out this image I drew to help you out
-![alt text](../reference/AkashVPN.png). Use this as inspiration for the service description
+A basic SDL file already exists with SoftEther VPN server configuration, but it needs to be expanded to include all services.
 
 **What to include:**
-- Service name and basic description
-- Main features (connect/disconnect, server selection)
-- User roles (free user, premium user)
-- Basic data flows (how users connect to VPN)
-- Keep it simple, we're not building AWS here
-
-**Tools to use:**
-- Draw.io (free and easy)
-- Or just use text/ASCII art if you're feeling creative
-- Or even just bullet points in a markdown file
-
-The goal is to have a basic blueprint, not a masterpiece.
+- Frontend service definition (Next.js)
+- Documentation service definition (Docusaurus)
+- Reverse proxy service definition (Caddy/Traefik)
+- SoftEther VPN server (already exists)
+- Proper networking between services
+- Shared volumes and persistent storage where needed
 
 ### [2nd Deliverable]
-Commit your SDL file to the github repo
+Test the master SDL file and ensure all services deploy correctly on Akash Network
 ### [Additional Info]
-that is all
+The SDL file needs to work properly for complete deployment on Akash Network.
+
+**What to verify:**
+- All services deploy successfully
+- Proper networking between containers
+- Services are accessible via reverse proxy
+- VPN functionality works end-to-end
+
 ### [1st Deliverable]: 1 hours
-Summary: create a basic SDL file for VPN service.
-### [2nd Deliverable]: 0 hours
-Summary: commit SDL file to repo.
-Total Estimated Time: 1 hours
+Summary: create master SDL file for all services deployment.
+Total Estimated Time: 1.5 hours

@@ -1,24 +1,25 @@
-# Make a Backend API [Beginner]
-please make a backend API for our VPN SaaS
+# Make a Backend API [Intermediate]
+please dockerize the Express.js server for Akash deployment
+
 ## What Specifically Needs to Be Done (Deliverables)
 ### [1st Deliverable]
-Design semi functional API endpoints for our VPN service
+Create a Dockerfile for the Express.js server and ensure it builds and runs properly in a container.
 ### [Additional Info]
-Here are the MVP endpoints we need (keep it simple, we're not trying to reinvent the wheel):
+The Express.js server already exists with basic functionality but needs to be containerized for deployment on Akash Network.
 
-**VPN Management:**
+**What to include:**
+- Create Dockerfile for Express.js server
+- Ensure all dependencies are properly included
+- Test that server works in containerized environment
+- Optimize for production deployment
+- Verify all endpoints still function correctly
+- Create SDL file for Akash deployment (service definition, resources, ports)
 
-- `GET /vpn/status` - Are we connected? Who knows, let's check
+**What to verify:**
+- Server responds correctly on containerized ports
+- All endpoints (/status, /connect, /disconnect) work
+- Integration with reverse proxy routing
+- Proper environment variable handling
 
-
-Keep it RESTful, keep it simple, keep it fun. We're building a VPN, not a rocket ship.
-
-### [2nd Deliverable]
-Commit your API design to the github repo
-### [Additional Info]
-that is all
-### [1st Deliverable]: 2 hours
-Summary: design VPN SaaS API endpoints with humor.
-### [2nd Deliverable]: 0 hours
-Summary: commit API design to repo.
-Total Estimated Time: 1 hours
+### [1st Deliverable]: 1 hours
+Summary: dockerize Express.js server for Akash deployment.
