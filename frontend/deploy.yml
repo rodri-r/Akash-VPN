@@ -1,0 +1,33 @@
+version: 2.0
+
+services:
+  frontend:
+    image: rodrirr/akashvpn-frontend:latest
+    expose:
+      - port: 3000
+        as: 80
+        to:
+          - global: true
+
+profiles:
+  compute:
+    frontend-profile:
+      resources:
+        cpu:
+          units: 0.5
+        memory:
+          size: 512Mi
+        storage:
+          size: 512Mi
+  placement:
+    akash:
+      pricing:
+        frontend-profile:
+          denom: uakt
+          amount: 5000
+
+deployment:
+  frontend:
+    akash:
+      profile: frontend-profile
+      count: 1
