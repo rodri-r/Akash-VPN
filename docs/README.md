@@ -1,41 +1,44 @@
-# Website
+# Akash VPN 🌐
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+**Decentralized Privacy for Everyone - Powered by Akash Network**
 
-## Installation
+![Akash VPN Logo](../design-system/avpn.png)
 
+A comprehensive, decentralized VPN solution built on the Akash Network. Akash VPN provides secure, private internet access without centralized control, leveraging the power of decentralized cloud infrastructure.
+
+---
+
+## 🏗️ Project Architecture
+
+This repository contains four core components that together form the Akash VPN ecosystem:
+
+### 📚 [Documentation](../akash-vpn-docs/)
+Comprehensive guides, setup instructions, and technical documentation built with Docusaurus.
+
+### 🖥️ [Web Frontend](../frontend/)
+Modern React/Next.js user interface featuring a stunning 3D globe visualization and intuitive VPN controls.
+
+### 🔒 [VPN Server](../vpn/)
+SoftEther VPN server implementation providing multi-protocol support (OpenVPN, L2TP/IPsec, SSL-VPN).
+
+### ⚡ [API Server](../server/)
+Backend service handling user authentication, server management, and VPN configuration.
+
+---
+
+## 🚀 Deployment Options
+
+### Individual Service Deployment
+Each component can be deployed independently using its dedicated `deploy.yml`:
 ```bash
-npm install
-```
+# Deploy documentation only
+akash tx deployment create ../akash-vpn-docs/deploy.yml --from your-wallet
 
-## Local Development
+# Deploy frontend only  
+akash tx deployment create ../frontend/deploy.yml --from your-wallet
 
-```bash
-npm start
-```
+# Deploy VPN server only
+akash tx deployment create ../vpn/deploy.yml --from your-wallet
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-npm run build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true npm deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+# Deploy API server only
+akash tx deployment create ../server/deploy.yml --from your-wallet
