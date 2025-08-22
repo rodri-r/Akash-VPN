@@ -26,19 +26,3 @@ Backend service handling user authentication, server management, and VPN configu
 
 ---
 
-## 🚀 Deployment Options
-
-### Individual Service Deployment
-Each component can be deployed independently using its dedicated `deploy.yml`:
-```bash
-# Deploy documentation only
-akash tx deployment create ../akash-vpn-docs/deploy.yml --from your-wallet
-
-# Deploy frontend only  
-akash tx deployment create ../frontend/deploy.yml --from your-wallet
-
-# Deploy VPN server only
-akash tx deployment create ../vpn/deploy.yml --from your-wallet
-
-# Deploy API server only
-akash tx deployment create ../server/deploy.yml --from your-wallet
