@@ -1,5 +1,5 @@
 # Akash VPN 🌐
-
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/Fluffy9/Akash-VPN?utm_source=oss&utm_medium=github&utm_campaign=Fluffy9%2FAkash-VPN&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 **Decentralized Privacy for Everyone - Powered by Akash Network**
 
 ![Akash VPN Logo](../design-system/avpn.png)
