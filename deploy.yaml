@@ -1,0 +1,41 @@
+---
+version: "2.0"
+
+services:
+  - name: akash-vpn
+    image: elliothudsondev/akash-vpn:latest
+    expose:
+      - port: 3000
+        as: 80
+        to:
+          - global: true
+    env:
+      - PORT=3000
+
+profiles:
+  compute:
+    main:
+      resources:
+        cpu:
+          units: 0.1
+        memory:
+          size: 128Mi
+        storage:
+          size: 512Mi
+  placement:
+    akash:
+      attributes:
+        organization: akash
+      signedBy:
+        anyOf:
+          - "akash1vz375dkt0c60xpyf0jj4auckm2l2pvnth6x5m8"
+      pricing:
+        main:
+          denom: uakt
+          amount: 1000
+
+deployment:
+  akash-vpn:
+    akash:
+      profile: main
+      count: 1 

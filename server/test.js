@@ -3,7 +3,7 @@ const http = require('http');
 // Test the /status endpoint
 const options = {
   hostname: 'localhost',
-  port: 3000,
+  port: 9000,
   path: '/status',
   method: 'GET'
 };
