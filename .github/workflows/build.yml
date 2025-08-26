@@ -196,6 +196,9 @@ jobs:
   security-scan:
     name: Security Scan
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     if: github.event_name == 'pull_request' && (needs.build-frontend.result == 'success' || needs.build-backend.result == 'success' || needs.build-docs.result == 'success')
     needs: [build-frontend, build-backend, build-docs]
     strategy:
@@ -220,7 +223,7 @@ jobs:
         if: steps.check-build.outputs.skip == 'false'
         uses: aquasecurity/trivy-action@0.24.0
         with:
-          image-ref: ${{ env.REGISTRY }}/${{ github.repository_owner }}/akash-vpn-${{ matrix.service }}:sha-${{ github.sha }}
+          image-ref: ${{ env.REGISTRY }}/${{ toLower(github.repository_owner) }}/akash-vpn-${{ matrix.service }}:sha-${{ github.sha }}
           format: 'sarif'
           output: 'trivy-results-${{ matrix.service }}.sarif'
 
