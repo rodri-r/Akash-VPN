@@ -25,8 +25,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Create a non-root user to run the application
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 expressjs
+RUN addgroup -S -g 1001 nodejs && adduser -S -u 1001 -G nodejs expressjs
 
 # Copy production dependencies
 COPY --from=deps --chown=expressjs:nodejs /app/node_modules ./node_modules
@@ -45,7 +44,7 @@ EXPOSE 3000
 
 # Health check to ensure the container is running properly
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get(process.env.HEALTHCHECK_URL || 'http://localhost:3000/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"
 
 # Start the application
 CMD ["npm", "start"]
