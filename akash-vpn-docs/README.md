@@ -101,7 +101,7 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for full guidelines.
 
 ## 📬 Support
 
-* [Akash Discord](https://discord.gg/JKGjJUHB)
+* [Akash Discord](https://discord.com/invite/akash)
 * [Akash Network Website](https://akash.network)
 
 ---

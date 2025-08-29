@@ -46,7 +46,7 @@ Here are a few quick things to try:
 * Switch to a different server (another location).
 * Restart the app or your device.
 
-If you're still stuck, reach out to our support team on [Discord](https://discord.gg/JKGjJUHB) — we’ve got your back.
+If you're still stuck, reach out to our support team on [Discord](https://discord.com/invite/akash) — we’ve got your back.
 
 ---
 
@@ -99,4 +99,4 @@ Akash VPN runs on a **decentralized network**, meaning it doesn’t rely on any 
 
 ### 💬 How do I contact support?
 
-Join our [Discord server](https://discord.gg/JKGjJUHB) for fast help. We’re here to assist you 24/7.
+Join our [Discord server](https://discord.com/invite/akash) for fast help. We’re here to assist you 24/7.

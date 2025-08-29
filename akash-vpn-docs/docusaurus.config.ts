@@ -62,7 +62,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://discord.gg/JKGjJUHB',
+          href: 'https://discord.com/invite/akash',
           label: 'Support',
           position: 'right',
         },
@@ -90,7 +90,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/JKGjJUHB',
+              href: 'https://discord.com/invite/akash',
             },
             {
               label: 'Twitter/X',
