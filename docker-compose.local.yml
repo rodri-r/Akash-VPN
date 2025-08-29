@@ -9,7 +9,7 @@ services:
       - "3003:3003"  # Direct docs access
       - "5555:5555"  # VPN admin interface
     volumes:
-      - ./Caddyfile.local:/etc/caddy/Caddyfile
+      - ./caddy/Caddyfile.local:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
@@ -68,6 +68,9 @@ services:
     # Remove external port mapping - only accessible via Caddy
     expose:
       - "3000"
+    environment:
+      - NODE_ENV=development
+      - SITE_URL=http://localhost
     volumes:
       - ./akash-vpn-docs:/app
       - /app/node_modules

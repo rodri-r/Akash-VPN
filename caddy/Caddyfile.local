@@ -1,0 +1,48 @@
+# Caddyfile for Local Development
+# Serves all services on localhost with HTTP (no TLS needed for local dev)
+
+{
+    # Global options for local development
+    auto_https off
+    admin off
+}
+
+:80 {
+    # Health check endpoint (most specific first)
+    handle /health {
+        respond "Caddy is running - Akash VPN Local Development" 200
+    }
+    
+    # Documentation - /docs path (specific path first)
+    handle /docs* {
+        reverse_proxy docs:3000
+    }
+    
+    # API - /api path (specific path first)
+    handle /api* {
+        reverse_proxy backend:3000
+    }
+    
+    # Frontend - Main site (catch-all for root and other paths)
+    handle {
+        reverse_proxy frontend:3000
+    }
+}
+
+# Alternative direct service access (for development/debugging)
+:3001 {
+    reverse_proxy frontend:3000
+}
+
+:3002 {
+    reverse_proxy backend:3000
+}
+
+:3003 {
+    reverse_proxy docs:3000
+}
+
+# VPN service direct access (SoftEther admin interface)
+:5555 {
+    reverse_proxy vpn:5555
+}

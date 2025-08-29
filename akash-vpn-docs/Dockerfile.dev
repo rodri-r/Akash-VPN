@@ -1,0 +1,23 @@
+FROM node:18-alpine AS base
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+# Set environment variables for development
+ENV NODE_ENV=development
+ENV SITE_URL=http://localhost
+
+# Start development server with polling for Docker
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll"]

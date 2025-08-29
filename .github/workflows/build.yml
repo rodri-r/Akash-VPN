@@ -37,9 +37,7 @@ jobs:
               - 'akash-vpn-docs/**'
             caddy:
               - 'caddy/**'
-              - 'Caddyfile*'
               - 'docker-compose*.yml'
-              - 'test-proxy.sh'
 
   build-frontend:
     name: Build Frontend Container
@@ -314,6 +312,8 @@ jobs:
           echo "Configuring Caddy reverse proxy for staging..."
           # Deploy with docker-compose for staging
           # docker-compose -f docker-compose.local.yml up -d
+          # Test the proxy setup
+          # cd caddy && ./test-proxy.sh
           # Add your staging deployment logic here
           # This could be updating Akash deployments, Kubernetes configs, etc.
 

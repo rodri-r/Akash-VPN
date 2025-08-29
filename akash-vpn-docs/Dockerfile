@@ -3,7 +3,12 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 COPY . .
-RUN yarn install && yarn build
+
+# Build-time environment variable
+ARG SITE_URL=https://your-domain.com
+ENV SITE_URL=${SITE_URL}
+
+RUN npm ci && npm run build
 
 # Production stage
 FROM nginx:alpine
