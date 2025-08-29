@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: process.env.SITE_URL || 'http://localhost', // Dynamic URL based on environment
+  url: process.env.SITE_URL || 'http://localhost', // Use dynamic URL based on environment
   baseUrl: '/docs/',
 
   organizationName: 'Akash-Network',
