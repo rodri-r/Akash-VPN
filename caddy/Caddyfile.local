@@ -19,7 +19,7 @@
     }
     
     # API - /api path (specific path first)
-    handle /api* {
+    handle_path /api* {
         reverse_proxy backend:3000
     }
     
@@ -44,5 +44,9 @@
 
 # VPN service direct access (SoftEther admin interface)
 :5555 {
-    reverse_proxy vpn:5555
+    reverse_proxy https://vpn:5555 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
 }

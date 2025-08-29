@@ -38,8 +38,8 @@ echo -e "\n${YELLOW}🌐 Testing HTTP endpoints...${NC}"
 
 # Main routing tests
 test_endpoint "http://localhost/" "Frontend (root path)"
-test_endpoint "http://localhost/docs" "Documentation (/docs path)"
-test_endpoint "http://localhost/api" "Backend API (/api path)" 404
+test_endpoint "http://localhost/docs" "Documentation (/docs path)" 301
+test_endpoint "http://localhost/api/status" "Backend API (/api/status path)"
 test_endpoint "http://localhost/health" "Health check endpoint"
 
 # Direct service access tests
@@ -82,7 +82,7 @@ if command -v nc &> /dev/null; then
     fi
     
     # Test VPN admin interface via Caddy
-    test_endpoint "http://localhost:5555/" "VPN Admin Interface (via Caddy)"
+    test_endpoint "http://localhost:5555/" "VPN Admin Interface (via Caddy)" 403
 else
     echo "⚠️  netcat (nc) not available - skipping port tests"
 fi
