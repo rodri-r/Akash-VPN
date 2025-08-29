@@ -1,0 +1,53 @@
+# Caddy reverse proxy configuration for Akash VPN
+# This file should be customized based on your domain and service requirements
+
+{
+    # Global options
+    admin off
+    auto_https disable_redirects
+}
+
+# Health check endpoint
+:80/health {
+    respond "OK" 200
+}
+
+# Frontend proxy (Next.js)
+:80/app* {
+    reverse_proxy frontend:3000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}
+
+# API proxy (Express backend)
+:80/api* {
+    reverse_proxy server:3000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}
+
+# Documentation proxy (Docusaurus)
+:80/docs* {
+    reverse_proxy akash-vpn-docs:3000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}
+
+# Default route to frontend
+:80 {
+    reverse_proxy frontend:3000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}
