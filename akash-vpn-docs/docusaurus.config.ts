@@ -11,8 +11,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://akash-vpn-docs.example.com', // 🔁 Replace with the actual domain
-  baseUrl: '/',
+  url: process.env.SITE_URL || 'http://localhost', // Use dynamic URL based on environment
+  baseUrl: '/docs/',
 
   organizationName: 'Akash-Network',
   projectName: 'Akash-VPN',    // To use the GitHub repo name
