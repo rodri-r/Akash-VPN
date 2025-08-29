@@ -46,5 +46,5 @@ This site is useful if you are:
 
 ## 💬 Need help?
 
-- Join our [Discord server](https://discord.gg/JKGjJUHB)
+- Join our [Discord server](https://discord.com/invite/akash)
 
