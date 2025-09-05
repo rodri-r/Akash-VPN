@@ -13,16 +13,16 @@ A comprehensive, decentralized VPN solution built on the Akash Network. Akash VP
 
 This repository contains four core components that together form the Akash VPN ecosystem:
 
-### 📚 [Documentation](../akash-vpn-docs/)
+### 📚 [Documentation](/akash-vpn-docs/)
 Comprehensive guides, setup instructions, and technical documentation built with Docusaurus.
 
-### 🖥️ [Web Frontend](../frontend/)
+### 🖥️ [Web Frontend](/frontend/)
 Modern React/Next.js user interface featuring a stunning 3D globe visualization and intuitive VPN controls.
 
-### 🔒 [VPN Server](../vpn/)
+### 🔒 [VPN Server](/vpn/)
 SoftEther VPN server implementation providing multi-protocol support (OpenVPN, L2TP/IPsec, SSL-VPN).
 
-### ⚡ [API Server](../server/)
+### ⚡ [API Server](/server/)
 Backend service handling user authentication, server management, and VPN configuration.
 
 ---
